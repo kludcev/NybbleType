@@ -1,0 +1,7 @@
+C:\Users\Niko\Documents\Visual Studio 2013\Projects\Nybble\NybbleUnitTest\bin\Release\NybbleUnitTest.dll
+C:\Users\Niko\Documents\Visual Studio 2013\Projects\Nybble\NybbleUnitTest\bin\Release\NybbleUnitTest.pdb
+C:\Users\Niko\Documents\Visual Studio 2013\Projects\Nybble\NybbleUnitTest\bin\Release\Nybble.exe
+C:\Users\Niko\Documents\Visual Studio 2013\Projects\Nybble\NybbleUnitTest\bin\Release\Nybble.pdb
+C:\Users\Niko\Documents\Visual Studio 2013\Projects\Nybble\NybbleUnitTest\obj\Release\NybbleUnitTest.csprojResolveAssemblyReference.cache
+C:\Users\Niko\Documents\Visual Studio 2013\Projects\Nybble\NybbleUnitTest\obj\Release\NybbleUnitTest.dll
+C:\Users\Niko\Documents\Visual Studio 2013\Projects\Nybble\NybbleUnitTest\obj\Release\NybbleUnitTest.pdb
