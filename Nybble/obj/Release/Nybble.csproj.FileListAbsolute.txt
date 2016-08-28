@@ -9,3 +9,4 @@ C:\Users\Niko\Dropbox\Repos\Nybble\Nybble\obj\Release\Nybble.exe
 C:\Users\Niko\Dropbox\Repos\Nybble\Nybble\obj\Release\Nybble.pdb
 C:\Users\Niko\Dropbox\Repos\Nybble\Nybble\bin\Release\Nybble.exe
 C:\Users\Niko\Dropbox\Repos\Nybble\Nybble\bin\Release\Nybble.pdb
+C:\Users\Niko\Dropbox\Repos\Nybble\Nybble\obj\Release\Nybble.csprojResolveAssemblyReference.cache

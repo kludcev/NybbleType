@@ -4,18 +4,15 @@ namespace Nybble
 {
    public partial struct Nybble
    {
-       #region Iconvertible implementation
-
        public TypeCode GetTypeCode()
        {
-           return Type.GetTypeCode(typeof(Nybble));
+           return TypeCode.Object;
        }
 
        public bool ToBoolean(IFormatProvider provider)
        {
            throw new InvalidCastException();
        }
-
 
        public char ToChar(IFormatProvider provider)
        {
@@ -24,7 +21,7 @@ namespace Nybble
 
        public sbyte ToSByte(IFormatProvider provider)
        {
-           return Convert.ToSByte(val);
+          return Convert.ToSByte(val);
        }
 
        public byte ToByte(IFormatProvider provider)
@@ -44,7 +41,7 @@ namespace Nybble
 
        public int ToInt32(IFormatProvider provider)
        {
-           return Convert.ToInt32(val);
+           return val;
        }
 
        public uint ToUInt32(IFormatProvider provider)
@@ -74,7 +71,8 @@ namespace Nybble
 
        public decimal ToDecimal(IFormatProvider provider)
        {
-           return Convert.ToDecimal(val);
+           return Convert.ToDecimal(val)
+               ;
        }
 
        public DateTime ToDateTime(IFormatProvider provider)
@@ -82,24 +80,15 @@ namespace Nybble
            throw new InvalidCastException();
        }
 
-        public string ToString(IFormatProvider provider)
+       public string ToString(IFormatProvider provider)
        {
-           //return ((IConvertible)val).ToString(provider);
-           return ToString();
+           return val.ToString();
        }
 
        public object ToType(Type conversionType, IFormatProvider provider)
        {
-           throw new InvalidCastException();
-
+           throw new NotImplementedException();
        }
-
-       public override string ToString()
-       {
-           return "zalupa";
-       }
-
-       #endregion
    }
 
 

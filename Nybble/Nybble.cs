@@ -17,7 +17,7 @@ namespace Nybble
 {// ComVisible(true) allows this class to be accessed from another environments. Example: http://jumbloid.blogspot.ru/2009/12/making-net-dll-com-visible.html
     // StructLayout - This attribute forcing CLR to layout fields of the type in memory sequantualy. https://habrahabr.ru/post/114953/
     [ComVisible(true), Serializable, StructLayout(LayoutKind.Sequential)] 
-   public partial struct Nybble : IComparable<Nybble>, IConvertible 
+   public partial struct Nybble : IComparable<Nybble>, IConvertible
 
     {
         private int val; // storage 
