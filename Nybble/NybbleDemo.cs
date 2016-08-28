@@ -14,10 +14,9 @@ namespace Nybble
                 Nybble b = new Nybble(12);
                 Nybble c = new Nybble(4);
                 Nybble d = new Nybble(5);
-                Nybble e = 15; 
-                Nybble f = null;
-                //    Nybble g = new Nybble(120); ArgumentOutOfTheRange ERROR
-                //Nybble z = 100; ArgumentOutOfTheRange ERROR
+                Nybble e = 15;
+                Nybble f;
+                f = 15;
                 int t;
                 object z = 10;
 
@@ -96,6 +95,8 @@ namespace Nybble
                 var ci = new CultureInfo("en-US");
                 byte l = a.ToByte(ci);
                 Console.WriteLine("Completed. Byte l = {0}",l);
+
+                Console.WriteLine();
 
             }
             catch(Exception ex)
