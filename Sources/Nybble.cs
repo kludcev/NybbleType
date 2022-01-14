@@ -61,199 +61,198 @@ namespace Sources
             return TypeCode.Object;
         }
 
-        public bool ToBoolean(IFormatProvider provider)
+        public bool ToBoolean(IFormatProvider formatProvider)
         {
             throw new InvalidCastException();
         }
 
-        public char ToChar(IFormatProvider provider)
+        public char ToChar(IFormatProvider formatProvider)
         {
             throw new InvalidCastException();
         }
 
-        public sbyte ToSByte(IFormatProvider provider)
+        public sbyte ToSByte(IFormatProvider formatProvider)
         {
             return Convert.ToSByte(_value);
         }
 
-        public byte ToByte(IFormatProvider provider)
+        public byte ToByte(IFormatProvider formatProvider)
         {
             return _value;
         }
 
-        public short ToInt16(IFormatProvider provider)
+        public short ToInt16(IFormatProvider formatProvider)
         {
             return Convert.ToInt16(_value);
         }
 
-        public ushort ToUInt16(IFormatProvider provider)
+        public ushort ToUInt16(IFormatProvider formatProvider)
         {
             return Convert.ToUInt16(_value);
         }
 
-        public int ToInt32(IFormatProvider provider)
+        public int ToInt32(IFormatProvider formatProvider)
         {
             return Convert.ToInt32(_value);
         }
 
-        public uint ToUInt32(IFormatProvider provider)
+        public uint ToUInt32(IFormatProvider formatProvider)
         {
             return Convert.ToUInt32(_value);
         }
 
-        public long ToInt64(IFormatProvider provider)
+        public long ToInt64(IFormatProvider formatProvider)
         {
             return Convert.ToInt64(_value);
         }
 
-        public ulong ToUInt64(IFormatProvider provider)
+        public ulong ToUInt64(IFormatProvider formatProvider)
         {
             return Convert.ToUInt64(_value);
         }
 
-        public float ToSingle(IFormatProvider provider)
+        public float ToSingle(IFormatProvider formatProvider)
         {
             return Convert.ToSingle(_value);
         }
 
-        public double ToDouble(IFormatProvider provider)
+        public double ToDouble(IFormatProvider formatProvider)
         {
             return Convert.ToDouble(_value);
         }
 
-        public decimal ToDecimal(IFormatProvider provider)
+        public decimal ToDecimal(IFormatProvider formatProvider)
         {
             return Convert.ToDecimal(_value);
         }
 
-        public DateTime ToDateTime(IFormatProvider provider)
+        public DateTime ToDateTime(IFormatProvider formatProvider)
         {
             throw new InvalidCastException();
         }
 
-        public string ToString(IFormatProvider provider)
+        public string ToString(IFormatProvider formatProvider)
         {
-            return ToString(null, provider);
+            return ToString(null, formatProvider);
         }
 
-        public object ToType(Type conversionType, IFormatProvider provider)
+        public object ToType(Type conversionType, IFormatProvider formatProvider)
         {
             return Convert.ChangeType(_value, conversionType);
         }
 
         #endregion
 
-        public static implicit operator int(Nybble op)
+        public static implicit operator int(Nybble nybble)
         {
-            return op._value;
+            return nybble._value;
         }
 
-        public static implicit operator Nybble(int op)
+        public static implicit operator Nybble(int integer)
         {
-            return new((byte)op);
+            return new((byte)integer);
         }
 
         #region Arithmetic operations
 
-        public static Nybble operator +(Nybble op1, Nybble op2)
+        public static Nybble operator +(Nybble nybble1, Nybble nybble2)
         {
-            return new((byte)(op1._value + op2._value));
+            return new((byte)(nybble1._value + nybble2._value));
         }
 
-        public static Nybble operator +(Nybble op1, int op2)
+        public static Nybble operator +(Nybble nybble, int integer)
         {
-            return new((byte)(op1._value + op2));
+            return new((byte)(nybble._value + integer));
         }
 
-        public static Nybble operator +(int op1, Nybble op2)
+        public static Nybble operator +(int integer, Nybble nybble)
         {
-            return new((byte)(op1 + op2._value));
+            return new((byte)(integer + nybble._value));
         }
 
-        public static Nybble operator ++(Nybble op)
+        public static Nybble operator ++(Nybble nybble)
         {
-            return new((byte)(op._value + 1));
+            return new((byte)(nybble._value + 1));
         }
 
-        public static Nybble operator -(Nybble op1, Nybble op2)
+        public static Nybble operator -(Nybble nybble1, Nybble nybble2)
         {
-            return new((byte)(op1._value - op2._value));
+            return new((byte)(nybble1._value - nybble2._value));
         }
 
-        public static Nybble operator -(Nybble op1, int op2)
+        public static Nybble operator -(Nybble nybble, int integer)
         {
-            return new((byte)(op1._value - op2));
+            return new((byte)(nybble._value - integer));
         }
 
-        public static Nybble operator -(int op1, Nybble op2)
+        public static Nybble operator -(int integer, Nybble nybble)
         {
-            return new((byte)(op1 - op2._value));
-
+            return new((byte)(integer - nybble._value));
         }
 
-        public static Nybble operator --(Nybble op)
+        public static Nybble operator --(Nybble nybble)
         {
-            return new((byte)(op._value - 1));
+            return new((byte)(nybble._value - 1));
         }
 
-        public static Nybble operator *(Nybble op1, Nybble op2)
+        public static Nybble operator *(Nybble nybble1, Nybble nybble2)
         {
-            return new((byte)(op1._value * op2._value));
+            return new((byte)(nybble1._value * nybble2._value));
         }
 
-        public static Nybble operator *(Nybble op1, int op2)
+        public static Nybble operator *(Nybble nybble, int integer)
         {
-            return new((byte)(op1._value * op2));
+            return new((byte)(nybble._value * integer));
         }
 
-        public static Nybble operator *(int op1, Nybble op2)
+        public static Nybble operator *(int integer, Nybble nybble)
         {
-            return new((byte)(op1 * op2._value));
+            return new((byte)(integer * nybble._value));
         }
 
-        public static Nybble operator /(Nybble op1, Nybble op2)
+        public static Nybble operator /(Nybble nybble1, Nybble nybble2)
         {
-            return new((byte)(op1._value / op2._value));
+            return new((byte)(nybble1._value / nybble2._value));
         }
 
-        public static Nybble operator /(Nybble op1, int op2)
+        public static Nybble operator /(Nybble nybble, int integer)
         {
-            return new((byte)(op1._value / op2));
+            return new((byte)(nybble._value / integer));
         }
 
-        public static Nybble operator /(int op1, Nybble op2)
+        public static Nybble operator /(int integer, Nybble nybble)
         {
-            return new((byte)(op1 / op2._value));
+            return new((byte)(integer / nybble._value));
         }
 
-        public static bool operator >(Nybble op1, Nybble op2)
+        public static bool operator >(Nybble nybble1, Nybble nybble2)
         {
-            return op1._value > op2._value;
+            return nybble1._value > nybble2._value;
         }
 
-        public static bool operator >=(Nybble op1, Nybble op2)
+        public static bool operator >=(Nybble nybble1, Nybble nybble2)
         {
-            return op1._value >= op2._value;
+            return nybble1._value >= nybble2._value;
         }
 
-        public static bool operator <=(Nybble op1, Nybble op2)
+        public static bool operator <=(Nybble nybble1, Nybble nybble2)
         {
-            return op1._value <= op2._value;
+            return nybble1._value <= nybble2._value;
         }
 
-        public static bool operator <(Nybble op1, Nybble op2)
+        public static bool operator <(Nybble nybble1, Nybble nybble2)
         {
-            return op1._value < op2._value;
+            return nybble1._value < nybble2._value;
         }
 
-        public static bool operator ==(Nybble op1, Nybble op2)
+        public static bool operator ==(Nybble nybble1, Nybble nybble2)
         {
-            return op1._value == op2._value;
+            return nybble1._value == nybble2._value;
         }
 
-        public static bool operator !=(Nybble op1, Nybble op2)
+        public static bool operator !=(Nybble nybble1, Nybble nybble2)
         {
-            return op1._value != op2._value;
+            return nybble1._value != nybble2._value;
         }
 
         #endregion
